@@ -1,6 +1,6 @@
-(ns markov-elear.generator-test
+(ns markov-elear.core-test
   (:require [clojure.test :refer :all]
-            [markov-elear.generator :refer :all]))
+            [markov-elear.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
