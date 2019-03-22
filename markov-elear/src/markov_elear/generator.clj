@@ -10,8 +10,9 @@
 (merge-with clojure.set/union {:a #{1}} {:a #{2}})
 
 (defn word-chain [word-trans]
-  (reduce (fn [r t]            (merge-with clojure.set/union r)
-                        (let [[a b c] t]
-                          {[a b] (if c #{} #{})})))
-  {}
-  word-trans)
+  (reduce (fn [r t]
+              (merge-with clojure.set/union r
+                            (let [[a b c] t]
+                                {[a b] (if c #{} #{})})))
+    {}
+    word-trans))
