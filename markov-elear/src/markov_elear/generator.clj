@@ -1,4 +1,5 @@
-(ns markov-elear.generator)
+(ns markov-elear.generator
+  (:require clojure.java.io))
 
 (def ex "And the Golden Grouse and the Pobble who")
 
@@ -45,4 +46,4 @@
   (text->word-chain
    (slurp (clojure.java.io/resource fname))))
 
-(generate-text "And the" (process-file "quangle-wangle.txt"))
+(generate-text "And the" (process-file "qw.txt"))
